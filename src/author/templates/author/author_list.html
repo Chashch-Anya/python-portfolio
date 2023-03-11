@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for author in object_list %}
+
+<ul class="list-unstyled">
+  <li><a href="{{author.link}}">Резюме</a></li>
+  <li><a href="{{author.github}}" target="_blank">GitHub</a></li>
+  <li><a href="mailto:{{author.email}}">Email</a></li>
+</ul>
+{% endfor %}
+
+{% endblock %}
